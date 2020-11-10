@@ -1,17 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:nikabooking/login_signup_screen/verification_screen.dart';
 
-class SignUpScreenNew extends StatefulWidget {
+class DriverSignUpScreen extends StatefulWidget {
   @override
-  _SignUpScreenNewState createState() => _SignUpScreenNewState();
+  _DriverSignUpScreenState createState() => _DriverSignUpScreenState();
 }
 
-class _SignUpScreenNewState extends State<SignUpScreenNew> {
-  final ValueChanged _onChanged = (val) => print(val);
+class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
   final GlobalKey<FormBuilderState> _fbKey = GlobalKey<FormBuilderState>();
-  bool checkBoxValue = true;
+  final ValueChanged _onChanged = (val) => print(val);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,13 +29,6 @@ class _SignUpScreenNewState extends State<SignUpScreenNew> {
                 flex: 3,
                 child: Container(
                   width: double.infinity,
-//                  decoration: BoxDecoration(
-//                    color: Colors.white,
-//                    borderRadius: BorderRadius.only(
-//                      topLeft: Radius.circular(70),
-//                      topRight: Radius.circular(70),
-//                    ),
-//                  ),
                 ),
               ),
             ],
@@ -57,12 +47,43 @@ class _SignUpScreenNewState extends State<SignUpScreenNew> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text(
-                              'Create an Account',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 18,
-                              ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      'Personal Verification',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 18,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      'Please upload required documents.',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                    Text(
+                                      'Get verified to start Riding',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: Colors.grey,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Icon(
+                                  Icons.person_pin_rounded,
+                                  size: 80,
+                                ),
+                              ],
                             ),
                             SizedBox(
                               height: 20,
@@ -139,106 +160,66 @@ class _SignUpScreenNewState extends State<SignUpScreenNew> {
                             SizedBox(
                               height: 10,
                             ),
-                            Text(
-                              'I have Referral code (Optional)',
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.grey),
-                            ),
-                            SizedBox(
-                              height: 5,
-                            ),
-                            FormBuilderTextField(
-                              attribute: "Code",
-                              decoration: InputDecoration(
-                                labelText: "Enter Referral Code",
-                                border: OutlineInputBorder(),
-                              ),
-                              validators: [
-                                FormBuilderValidators.numeric(
-                                    errorText: "errorText"),
-                                FormBuilderValidators.max(70),
+                            Row(
+                              children: <Widget>[
+                                Stack(
+                                  alignment: Alignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      height: 80,
+                                      width: 80,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey[200],
+                                      ),
+                                    ),
+                                    Image.asset('assets/images/id-card.png'),
+                                  ],
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Text(
+                                  'Upload from of NRIC',
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ],
                             ),
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Checkbox(
-                                      value: checkBoxValue,
-                                      activeColor: Colors.black,
-                                      onChanged: (bool newValue) {
-                                        setState(() {
-                                          checkBoxValue = newValue;
-                                        });
-                                      }),
-                                  Text(
-                                    'I agree with the',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                ],
-                              ),
+                            SizedBox(
+                              height: 10,
                             ),
-                            Container(
-                              alignment: Alignment.center,
-                              child: RaisedButton(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30.0),
+                            Row(
+                              children: <Widget>[
+                                Stack(
+                                  alignment: Alignment.center,
+                                  children: <Widget>[
+                                    Container(
+                                      height: 80,
+                                      width: 80,
+                                      decoration: BoxDecoration(
+                                        color: Colors.grey[200],
+                                      ),
+                                    ),
+                                    Image.asset('assets/images/id-card.png'),
+                                  ],
                                 ),
-                                child: Text(
-                                  'Continue',
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Text(
+                                  'Upload Back of NRIC',
                                   style: TextStyle(
-                                    color: Colors.white,
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                                onPressed: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          VerificationScreen(),
-                                    ),
-                                  );
-                                },
-                                color: Colors.black,
-                              ),
+                              ],
                             ),
-                            Container(
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  TextButton(
-                                    child: Text(
-                                      'Term & Conditions',
-                                      style: TextStyle(
-                                          decoration: TextDecoration.underline,
-                                          color: Colors.black
-//                                      fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                  Text(
-                                    '  &  ',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  TextButton(
-                                    child: Text(
-                                      'Privacy & Policy',
-                                      style: TextStyle(
-                                          decoration: TextDecoration.underline,
-                                          color: Colors.black
-//                                    fontWeight: FontWeight.bold,
-                                          ),
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                ],
-                              ),
-                            )
+                            SizedBox(
+                              height: 10,
+                            ),
                           ],
                         ),
                       ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nikabooking/screen/select_language_screen.dart';
+import 'package:nikabooking/driver_login_screen/login_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 //        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       debugShowCheckedModeBanner: false,
-      home: SelectLanguage(),
+      home: LoginScreen(),
     );
   }
 }
