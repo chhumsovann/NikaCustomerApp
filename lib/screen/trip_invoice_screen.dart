@@ -6,6 +6,7 @@ class TripInvoiceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Container(),
         title: Text('Trip Invoice'),
         centerTitle: true,
       ),
@@ -19,9 +20,8 @@ class TripInvoiceScreen extends StatelessWidget {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.black,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(70),
-                    topRight: Radius.circular(70),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
                   ),
                 ),
                 child: Padding(

@@ -66,6 +66,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
                                 ),
                               ),
                               trailing: Radio(
+                                activeColor: Colors.black,
                                 value: SingingCharacter.Khmer,
                                 groupValue: language,
                                 onChanged: (SingingCharacter value) {
@@ -85,6 +86,7 @@ class _SelectLanguageState extends State<SelectLanguage> {
                                 ),
                               ),
                               trailing: Radio(
+                                activeColor: Colors.black,
                                 value: SingingCharacter.English,
                                 groupValue: language,
                                 onChanged: (SingingCharacter value) {

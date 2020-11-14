@@ -57,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0-nullsafety.1"
+  circular_countdown:
+    dependency: "direct main"
+    description:
+      name: circular_countdown
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.1"
   clock:
     dependency: transitive
     description:
@@ -166,7 +173,7 @@ packages:
       name: flutter_keyboard_visibility
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.2.2"
+    version: "3.3.0"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -232,14 +239,14 @@ packages:
       name: image
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.18"
+    version: "2.1.19"
   image_picker:
     dependency: transitive
     description:
       name: image_picker
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.7+12"
+    version: "0.6.7+14"
   image_picker_for_web:
     dependency: transitive
     description:

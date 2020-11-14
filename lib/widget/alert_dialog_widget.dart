@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:nikabooking/driver_screen/cash_out_screen.dart';
 
 class AlertDialogPromo extends StatelessWidget {
   const AlertDialogPromo({
@@ -24,10 +25,12 @@ class AlertDialogPromo extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(
-              Icons.code,
-              color: Colors.white,
-              size: 50,
+            Image.asset(
+              'assets/images/promo.png',
+              width: 50,
+            ),
+            SizedBox(
+              height: 10,
             ),
             Text(
               'Add Promo Code',
@@ -199,6 +202,128 @@ class AlertDialogCash extends StatelessWidget {
       ),
       contentPadding: EdgeInsets.all(0),
       titlePadding: EdgeInsets.all(0),
+    );
+  }
+}
+
+//Pay Package Screen
+enum payment { wallet, card }
+
+class AlertDialogBuyPackage extends StatefulWidget {
+  const AlertDialogBuyPackage({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  _AlertDialogBuyPackageState createState() => _AlertDialogBuyPackageState();
+}
+
+class _AlertDialogBuyPackageState extends State<AlertDialogBuyPackage> {
+  payment pay = payment.wallet;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 429,
+          ),
+          AlertDialog(
+            elevation: 5,
+            insetPadding: EdgeInsets.all(5),
+            contentPadding: EdgeInsets.all(0),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+            ),
+
+            //   titlePadding: EdgeInsets.all(0), // if you have title
+            content: Container(
+              width: MediaQuery.of(context).size.width,
+              height: 220,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    ListTile(
+                      title: Text(
+                        'USE WALLET : \$ 142.00',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      leading: Radio(
+                        activeColor: Colors.black,
+                        value: payment.wallet,
+                        groupValue: pay,
+                        onChanged: (payment value) {
+                          setState(() {
+                            pay = value;
+                          });
+                        },
+                      ),
+                    ),
+                    ListTile(
+                      title: Text(
+                        'Credit Card',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      leading: Radio(
+                        activeColor: Colors.black,
+                        value: payment.card,
+                        groupValue: pay,
+                        onChanged: (payment value) {
+                          setState(() {
+                            pay = value;
+                          });
+                        },
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30, right: 30),
+                      child: Container(
+                        height: 42,
+                        width: double.infinity,
+                        child: RaisedButton(
+                          elevation: 5,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ),
+                          child: Text(
+                            'Pay',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => CashOutScreen(),
+                              ),
+                            );
+                          },
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

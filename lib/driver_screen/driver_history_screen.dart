@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nikabooking/widget/drawer_widget.dart';
+import 'package:nikabooking/widget/driver_drawer_widget.dart';
 import 'package:nikabooking/widget/item_history_widget.dart';
 
-class HistoryScreen extends StatelessWidget {
+class DriverHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +14,7 @@ class HistoryScreen extends StatelessWidget {
         data: Theme.of(context).copyWith(
           canvasColor: Colors.black,
         ),
-        child: DrawerWidget(),
+        child: DriverDrawerWidget(),
       ),
       body: Container(
         child: Stack(
@@ -24,7 +23,7 @@ class HistoryScreen extends StatelessWidget {
               direction: Axis.vertical,
               children: <Widget>[
                 Expanded(
-                  flex: 1,
+                  flex: 2,
                   child: Container(
                     width: double.infinity,
                     color: Colors.black,
@@ -39,10 +38,17 @@ class HistoryScreen extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 12, right: 12, top: 70),
+              padding: const EdgeInsets.only(
+                left: 12,
+                right: 12,
+                top: 100,
+              ),
               child: Container(
                 child: ListView(
                   children: <Widget>[
+                    SizedBox(
+                      height: 50,
+                    ),
                     ItemHistoryWidget(),
                     ItemHistoryWidgetOne(),
                     ItemHistoryWidgetTwo(),
@@ -55,6 +61,28 @@ class HistoryScreen extends StatelessWidget {
               width: double.infinity,
               child: Column(
                 children: <Widget>[
+                  SizedBox(
+                    height: 10,
+                  ),
+                  Text(
+                    'Total Earned',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Text(
+                    '\$ 221.7',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                   SizedBox(
                     height: 10,
                   ),

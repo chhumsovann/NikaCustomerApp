@@ -20,6 +20,7 @@ class BookingScreen extends StatelessWidget {
                     target: LatLng(11.5572736, 104.8870912),
                     zoom: 12,
                   ),
+                  zoomControlsEnabled: false,
                 ),
               ),
             ),
@@ -222,7 +223,10 @@ class BookingScreen extends StatelessWidget {
                                 },
                                 child: Column(
                                   children: <Widget>[
-                                    Icon(Icons.code),
+                                    Image.asset(
+                                      'assets/images/promocode.png',
+                                      width: 25,
+                                    ),
                                     Text(
                                       'Promo',
                                       style: TextStyle(

@@ -1,17 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nikabooking/driver_login_screen/login_screen.dart';
-import 'package:nikabooking/screen/emergency_screen.dart';
-import 'package:nikabooking/screen/history_screen.dart';
-import 'package:nikabooking/screen/home_screen.dart';
-import 'package:nikabooking/screen/rate_us_screen.dart';
-import 'package:nikabooking/screen/setting_screen.dart';
-import 'package:nikabooking/screen/trip_details_screen.dart';
-import 'package:nikabooking/screen/trip_invoice_screen.dart';
-import 'package:nikabooking/screen/wallet_screen.dart';
+import 'package:nikabooking/driver_screen/buy_package_screen.dart';
+import 'package:nikabooking/driver_screen/cash_out_screen.dart';
+import 'package:nikabooking/driver_screen/driver_history_screen.dart';
+import 'package:nikabooking/driver_screen/driver_home_screen.dart';
+import 'package:nikabooking/driver_screen/driver_setting_screen.dart';
+import 'package:nikabooking/driver_screen/package_history_screen.dart';
+import 'package:nikabooking/screen/select_language_screen.dart';
 
-class DrawerWidget extends StatelessWidget {
-  const DrawerWidget({
+class DriverDrawerWidget extends StatelessWidget {
+  const DriverDrawerWidget({
     Key key,
   }) : super(key: key);
 
@@ -24,22 +22,35 @@ class DrawerWidget extends StatelessWidget {
             padding: const EdgeInsets.all(0),
             child: UserAccountsDrawerHeader(
               currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/boy.jpg'),
+                backgroundImage: AssetImage('assets/images/driver.jpg'),
               ),
               decoration: BoxDecoration(
                 color: Colors.white,
               ),
               accountName: Text(
-                "James Stroke",
+                "Aron Buttle",
                 style: TextStyle(
                   color: Colors.black,
+                  fontSize: 20,
                 ),
               ),
-              accountEmail: Text(
-                "+885 0963197285",
-                style: TextStyle(
-                  color: Colors.black,
-                ),
+              accountEmail: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Icon(
+                    Icons.star,
+                    color: Colors.yellow,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    '0.00',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
@@ -48,7 +59,7 @@ class DrawerWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HomeScreen(),
+                  builder: (context) => DriverHomeScreen(),
                 ),
               );
             },
@@ -95,7 +106,7 @@ class DrawerWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => WalletScreen(),
+                  builder: (context) => BuyPackageScreen(),
                 ),
               );
             },
@@ -142,7 +153,7 @@ class DrawerWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => HistoryScreen(),
+                  builder: (context) => DriverHistoryScreen(),
                 ),
               );
             },
@@ -189,7 +200,7 @@ class DrawerWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => TripInvoiceScreen(),
+                  builder: (context) => PackageHistoryScreen(),
                 ),
               );
             },
@@ -200,21 +211,21 @@ class DrawerWidget extends StatelessWidget {
                     width: 30,
                   ),
                   Icon(
-                    Icons.calendar_today_outlined,
+                    Icons.history,
                     color: Colors.white,
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   Text(
-                    'Schedule',
+                    'Package History',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
                     ),
                   ),
                   SizedBox(
-                    width: 130,
+                    width: 84,
                   ),
                   Icon(
                     Icons.arrow_forward_ios,
@@ -233,12 +244,12 @@ class DrawerWidget extends StatelessWidget {
           ),
           InkWell(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => RateUsScreen(),
-                ),
-              );
+//              Navigator.push(
+//                context,
+//                MaterialPageRoute(
+//                  builder: (context) => GoToPickupScreen(),
+//                ),
+//              );
             },
             child: Container(
               child: Row(
@@ -279,14 +290,7 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => TripDetailsScreen(),
-                ),
-              );
-            },
+            onTap: () {},
             child: Container(
               child: Row(
                 children: <Widget>[
@@ -294,21 +298,21 @@ class DrawerWidget extends StatelessWidget {
                     width: 30,
                   ),
                   Icon(
-                    Icons.info,
+                    Icons.local_taxi,
                     color: Colors.white,
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   Text(
-                    'Help Center',
+                    'Subscription',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
                     ),
                   ),
                   SizedBox(
-                    width: 115,
+                    width: 108,
                   ),
                   Icon(
                     Icons.arrow_forward_ios,
@@ -330,7 +334,7 @@ class DrawerWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SettingScreen(),
+                  builder: (context) => DriverSettingScreen(),
                 ),
               );
             },
@@ -377,7 +381,7 @@ class DrawerWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => EmergencyScreen(),
+                  builder: (context) => CashOutScreen(),
                 ),
               );
             },
@@ -388,21 +392,21 @@ class DrawerWidget extends StatelessWidget {
                     width: 30,
                   ),
                   Icon(
-                    Icons.call,
+                    Icons.monetization_on,
                     color: Colors.white,
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   Text(
-                    'Emergency Contacts',
+                    'Cash out',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 14,
                     ),
                   ),
                   SizedBox(
-                    width: 58,
+                    width: 130,
                   ),
                   Icon(
                     Icons.arrow_forward_ios,
@@ -419,18 +423,52 @@ class DrawerWidget extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          SizedBox(
-            height: 100,
-          ),
           InkWell(
             onTap: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => LoginScreen(),
+                  builder: (context) => SelectLanguage(),
                 ),
               );
             },
+            child: Container(
+              child: Row(
+                children: <Widget>[
+                  SizedBox(
+                    width: 30,
+                  ),
+                  Icon(
+                    Icons.logout,
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'Logout',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 142,
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white,
+                    size: 16,
+                  ),
+                ],
+              ),
+            ),
+          ), //Emergency
+          SizedBox(
+            height: 70,
+          ),
+          InkWell(
+            onTap: () {},
             child: Container(
               child: Row(
                 children: <Widget>[
@@ -465,26 +503,27 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           Container(
-              child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Icon(
-                Icons.copyright_outlined,
-                color: Colors.white,
-                size: 16,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Text(
-                'CopyRight 2020',
-                style: TextStyle(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Icon(
+                  Icons.copyright_outlined,
                   color: Colors.white,
-                  fontSize: 12,
+                  size: 16,
                 ),
-              ),
-            ],
-          ))
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  'CopyRight 2020',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

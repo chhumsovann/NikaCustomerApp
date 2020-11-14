@@ -37,8 +37,8 @@ class RateUsScreen extends StatelessWidget {
                         child: Row(
                           children: <Widget>[
                             Container(
-                              width: 50,
-                              height: 50,
+                              width: 80,
+                              height: 80,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Colors.white,

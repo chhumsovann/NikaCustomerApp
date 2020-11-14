@@ -34,6 +34,8 @@ dependencies:
   location: ^3.0.2
   cupertino_radio_choice: 1.0.0+1
   solid_bottom_sheet: ^0.1.9
+  circular_countdown: ^1.2.1
+
 
 
 
@@ -63,6 +65,9 @@ flutter:
      - assets/images/driver.jpg
      - assets/images/boy.jpg
      - assets/images/id-card.png
+     - assets/images/cursor.png
+     - assets/images/promocode.png
+     - assets/images/promo.png
 
 
 

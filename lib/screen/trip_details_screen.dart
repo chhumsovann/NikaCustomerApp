@@ -7,6 +7,7 @@ class TripDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: Container(),
         title: Text('Trip Details'),
         centerTitle: true,
       ),
@@ -15,17 +16,12 @@ class TripDetailsScreen extends StatelessWidget {
         width: double.infinity,
         child: Stack(
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
-              child: SizedBox(
-                height: 510,
-                child: GoogleMap(
-                  initialCameraPosition: CameraPosition(
-                    target: LatLng(11.5572736, 104.8870912),
-                    zoom: 12,
-                  ),
-                ),
+            GoogleMap(
+              initialCameraPosition: CameraPosition(
+                target: LatLng(11.5572736, 104.8870912),
+                zoom: 12,
               ),
+              zoomControlsEnabled: false,
             ),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),

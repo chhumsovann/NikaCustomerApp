@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:nikabooking/driver_screen/driver_home_screen.dart';
 
 class DriverStartScreen extends StatefulWidget {
   @override
@@ -103,7 +104,7 @@ class _DriverStartScreenState extends State<DriverStartScreen> {
                       Padding(
                         padding: const EdgeInsets.only(right: 30),
                         child: Container(
-                          height: 40,
+                          height: 50,
                           width: 100,
                           child: RaisedButton(
                             shape: RoundedRectangleBorder(
@@ -116,15 +117,26 @@ class _DriverStartScreenState extends State<DriverStartScreen> {
                                   'Login',
                                   style: TextStyle(
                                     color: Colors.black,
+                                    fontSize: 18,
                                   ),
                                 ),
                                 SizedBox(
-                                  width: 8,
+                                  width: 5,
                                 ),
-                                Icon(Icons.arrow_forward_ios)
+                                Icon(
+                                  Icons.arrow_forward_ios,
+                                  size: 18,
+                                )
                               ],
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => DriverHomeScreen(),
+                                ),
+                              );
+                            },
                             color: Colors.white,
                           ),
                         ),
