@@ -1,9 +1,9 @@
 import 'package:circular_countdown/circular_countdown.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:nikabooking/driver_screen/goto_pickup_screen.dart';
 import 'package:nikabooking/widget/driver_drawer_widget.dart';
+import 'package:nikabooking/widget/map_draw_widget.dart';
 
 class DriverHomeScreen extends StatefulWidget {
   @override
@@ -67,13 +67,7 @@ class _DriverHomeScreenState extends State<DriverHomeScreen> {
       body: Container(
         child: Stack(
           children: <Widget>[
-            GoogleMap(
-              initialCameraPosition: CameraPosition(
-                target: LatLng(11.5572736, 104.8870912),
-                zoom: 12,
-              ),
-              zoomControlsEnabled: false,
-            ),
+            MapDrawWidget(),
           ],
         ),
       ),

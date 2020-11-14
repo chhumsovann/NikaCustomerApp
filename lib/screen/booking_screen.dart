@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:nikabooking/screen/payment_option_screen.dart';
 import 'package:nikabooking/widget/alert_dialog_widget.dart';
+import 'package:nikabooking/widget/map_draw_widget.dart';
 
 class BookingScreen extends StatelessWidget {
   @override
@@ -15,13 +15,7 @@ class BookingScreen extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
               child: SizedBox(
                 height: 450,
-                child: GoogleMap(
-                  initialCameraPosition: CameraPosition(
-                    target: LatLng(11.5572736, 104.8870912),
-                    zoom: 12,
-                  ),
-                  zoomControlsEnabled: false,
-                ),
+                child: MapDrawWidget(),
               ),
             ),
             Padding(

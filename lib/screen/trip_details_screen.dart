@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:nikabooking/widget/map_draw_widget.dart';
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 
 class TripDetailsScreen extends StatelessWidget {
@@ -16,13 +16,7 @@ class TripDetailsScreen extends StatelessWidget {
         width: double.infinity,
         child: Stack(
           children: <Widget>[
-            GoogleMap(
-              initialCameraPosition: CameraPosition(
-                target: LatLng(11.5572736, 104.8870912),
-                zoom: 12,
-              ),
-              zoomControlsEnabled: false,
-            ),
+            MapDrawWidget(),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
               child: Container(

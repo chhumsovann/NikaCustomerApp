@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:nikabooking/widget/drawer_widget.dart';
+import 'package:nikabooking/widget/map_draw_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -22,12 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Container(
         child: Stack(
           children: <Widget>[
-            GoogleMap(
-              initialCameraPosition: CameraPosition(
-                target: LatLng(11.5572736, 104.8870912),
-                zoom: 12,
-              ),
-            ),
+            MapDrawWidget(),
             Padding(
               padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
               child: Container(

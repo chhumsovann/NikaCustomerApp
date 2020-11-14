@@ -7,6 +7,7 @@ import 'package:nikabooking/driver_screen/driver_home_screen.dart';
 import 'package:nikabooking/driver_screen/driver_setting_screen.dart';
 import 'package:nikabooking/driver_screen/package_history_screen.dart';
 import 'package:nikabooking/screen/select_language_screen.dart';
+import 'package:nikabooking/widget/date_time_widget.dart';
 
 class DriverDrawerWidget extends StatelessWidget {
   const DriverDrawerWidget({
@@ -18,41 +19,103 @@ class DriverDrawerWidget extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: <Widget>[
-          DrawerHeader(
-            padding: const EdgeInsets.all(0),
-            child: UserAccountsDrawerHeader(
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/driver.jpg'),
-              ),
-              decoration: BoxDecoration(
-                color: Colors.white,
-              ),
-              accountName: Text(
-                "Aron Buttle",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 20,
-                ),
-              ),
-              accountEmail: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Icon(
-                    Icons.star,
-                    color: Colors.yellow,
-                  ),
-                  SizedBox(
-                    width: 5,
-                  ),
-                  Text(
-                    '0.00',
-                    style: TextStyle(
-                      color: Colors.black,
+//          DrawerHeader(
+//            padding: const EdgeInsets.all(0),
+//            child: UserAccountsDrawerHeader(
+//              currentAccountPicture: CircleAvatar(
+//                backgroundImage: AssetImage('assets/images/driver.jpg'),
+//              ),
+//              decoration: BoxDecoration(
+//                color: Colors.white,
+//              ),
+//              accountName: Text(
+//                "Aron Buttle",
+//                style: TextStyle(
+//                  color: Colors.black,
+//                  fontSize: 20,
+//                ),
+//              ),
+//              accountEmail: Row(
+//                mainAxisAlignment: MainAxisAlignment.start,
+//                children: [
+//                  Icon(
+//                    Icons.star,
+//                    color: Colors.yellow,
+//                  ),
+//                  SizedBox(
+//                    width: 5,
+//                  ),
+//                  Text(
+//                    '0.00',
+//                    style: TextStyle(
+//                      color: Colors.black,
+//                    ),
+//                  ),
+//                ],
+//              ),
+//            ),
+//          ),
+
+          Container(
+            padding: EdgeInsets.only(top: 30, left: 10, right: 10, bottom: 10),
+            color: Colors.white,
+            child: Column(
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(100.0),
+                      child: Image.asset(
+                        "assets/images/driver.jpg",
+                        width: 80,
+                        height: 80,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                ],
-              ),
+                    SizedBox(
+                      width: 12,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'Aron Buttler',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                          ),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Icon(
+                              Icons.star,
+                              color: Colors.yellow,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              '0.00',
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                DateTimeWidget(),
+              ],
             ),
+          ),
+          SizedBox(
+            height: 30,
           ),
           InkWell(
             onTap: () {
@@ -247,7 +310,7 @@ class DriverDrawerWidget extends StatelessWidget {
 //              Navigator.push(
 //                context,
 //                MaterialPageRoute(
-//                  builder: (context) => GoToPickupScreen(),
+//                  builder: (context) => DateTimeWidget(),
 //                ),
 //              );
             },
@@ -465,7 +528,7 @@ class DriverDrawerWidget extends StatelessWidget {
             ),
           ), //Emergency
           SizedBox(
-            height: 70,
+            height: 40,
           ),
           InkWell(
             onTap: () {},

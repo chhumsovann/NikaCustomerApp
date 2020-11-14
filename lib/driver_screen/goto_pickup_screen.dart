@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:nikabooking/driver_screen/start_trip_screen.dart';
+import 'package:nikabooking/widget/map_draw_widget.dart';
 
 class GoToPickupScreen extends StatelessWidget {
   @override
@@ -24,13 +24,7 @@ class GoToPickupScreen extends StatelessWidget {
       body: Container(
         child: Stack(
           children: <Widget>[
-            GoogleMap(
-              initialCameraPosition: CameraPosition(
-                target: LatLng(11.5572736, 104.8870912),
-                zoom: 12,
-              ),
-              zoomControlsEnabled: false,
-            ),
+            MapDrawWidget(),
             Column(
               children: <Widget>[
                 SizedBox(

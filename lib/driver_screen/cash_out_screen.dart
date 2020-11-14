@@ -45,10 +45,10 @@ class CashOutScreen extends StatelessWidget {
                   Container(
                     width: double.infinity,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 20, left: 20),
+                      padding: const EdgeInsets.all(20),
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
                             'Remaining Cash out Amount',
@@ -73,7 +73,7 @@ class CashOutScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 25,
+                    height: 10,
                   ),
                   Expanded(
                     child: Padding(
