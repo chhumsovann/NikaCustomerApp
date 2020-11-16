@@ -1,6 +1,14 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:osom_rating/osom_rating.dart';
 
-class RateUsScreen extends StatelessWidget {
+class RateUsScreen extends StatefulWidget {
+  @override
+  _RateUsScreenState createState() => _RateUsScreenState();
+}
+
+class _RateUsScreenState extends State<RateUsScreen> {
+  double ratingValue = 3.3;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -93,58 +101,30 @@ class RateUsScreen extends StatelessWidget {
                             SizedBox(
                               height: 20,
                             ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 45, right: 45),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: <Widget>[
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.star,
-                                      size: 32,
-                                      color: Colors.yellow,
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.star,
-                                      size: 32,
-                                      color: Colors.yellow,
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.star,
-                                      size: 32,
-                                      color: Colors.yellow,
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.star,
-                                      size: 32,
-                                      color: Colors.yellow,
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                  IconButton(
-                                    icon: Icon(
-                                      Icons.star,
-                                      size: 32,
-                                      color: Colors.grey,
-                                    ),
-                                    onPressed: () {},
-                                  ),
-                                ],
-                              ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                OsomRating(
+                                  colorEmptyStar: Colors.black,
+                                  rating: ratingValue,
+                                  sizeStar: 45,
+                                  minimunHalfValue: 2,
+                                  totalStars: 5,
+                                  onTapped: (currentRating) {
+                                    setState(() {
+                                      this.ratingValue = currentRating;
+                                    });
+                                  },
+                                  onDoubleTapped: () {
+                                    setState(() {
+                                      this.ratingValue = 0;
+                                    });
+                                  },
+                                ),
+                              ],
                             ),
                             SizedBox(
-                              height: 10,
+                              height: 20,
                             ),
                             TextField(
                               minLines: 5,

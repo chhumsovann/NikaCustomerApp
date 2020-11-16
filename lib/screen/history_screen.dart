@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nikabooking/widget/date_picker_widget.dart';
 import 'package:nikabooking/widget/drawer_widget.dart';
 import 'package:nikabooking/widget/item_history_widget.dart';
 
@@ -61,32 +62,7 @@ class HistoryScreen extends StatelessWidget {
                   Container(
                     height: 40,
                     width: 160,
-                    child: RaisedButton(
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text(
-                            'Sep 21,2020',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Icon(
-                            Icons.keyboard_arrow_down,
-                            color: Colors.grey,
-                          )
-                        ],
-                      ),
-                      onPressed: () {},
-                      color: Colors.white,
-                    ),
+                    child: DatePickerWidget(),
                   ),
                 ],
               ),
