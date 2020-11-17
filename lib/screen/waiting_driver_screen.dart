@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:nikabooking/widget/map_draw_widget.dart';
 
 class WaitingDriverScreen extends StatelessWidget {
@@ -54,7 +55,13 @@ class WaitingDriverScreen extends StatelessWidget {
                           child: CircleAvatar(
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(100),
-                              child: MapDrawWidget(),
+                              child: GoogleMap(
+                                initialCameraPosition: CameraPosition(
+                                  target: LatLng(10.988019, 104.7809549),
+                                  zoom: 12,
+                                ),
+                                zoomControlsEnabled: false,
+                              ),
                             ),
                           ),
                         ),
