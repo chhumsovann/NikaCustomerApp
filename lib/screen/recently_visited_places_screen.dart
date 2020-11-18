@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/screen/booking_screen.dart';
 
 class RecentlyVisitedPlaces extends StatelessWidget {
@@ -36,7 +37,7 @@ class RecentlyVisitedPlaces extends StatelessWidget {
                             Icon(Icons.location_on),
                             TextButton(
                               child: Text(
-                                'Tap to select from the map',
+                                'tap_to_select_from_the_map'.tr,
                                 style: TextStyle(
                                   color: Colors.black,
                                 ),
@@ -101,7 +102,7 @@ class RecentlyVisitedPlaces extends StatelessWidget {
                           child: Divider(),
                         ),
                         Text(
-                          'Recently Visited Places',
+                          'recently_visited_places'.tr,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,

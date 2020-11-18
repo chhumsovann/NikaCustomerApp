@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/driver_screen/driver_home_screen.dart';
 
 class DriverStartScreen extends StatefulWidget {
@@ -85,7 +86,7 @@ class _DriverStartScreenState extends State<DriverStartScreen> {
                                 color: Colors.white,
                               ),
                             ),
-                            labelText: 'Phone Number',
+                            labelText: 'phone_number'.tr,
                             labelStyle: TextStyle(
                               color: Colors.white,
                             ),
@@ -114,7 +115,7 @@ class _DriverStartScreenState extends State<DriverStartScreen> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  'Login',
+                                  'login'.tr,
                                   style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 18,

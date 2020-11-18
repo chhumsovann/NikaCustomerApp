@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/widget/driver_drawer_widget.dart';
 import 'package:nikabooking/widget/item_history_widget.dart';
 
@@ -7,7 +8,7 @@ class DriverHistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('History'),
+        title: Text('history'.tr),
         centerTitle: true,
       ),
       drawer: Theme(
@@ -65,7 +66,7 @@ class DriverHistoryScreen extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    'Total Earned',
+                    'total_earned'.tr,
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/driver_screen/receipt_screen.dart';
 import 'package:nikabooking/widget/map_draw_widget.dart';
 
@@ -9,7 +10,7 @@ class StartTripScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Container(),
-        title: Text('Start Trip'),
+        title: Text('start_trip'.tr),
         centerTitle: true,
         actions: [
           Padding(

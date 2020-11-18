@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/screen/payment_option_screen.dart';
 import 'package:nikabooking/widget/alert_dialog_widget.dart';
 import 'package:nikabooking/widget/map_draw_widget.dart';
@@ -179,7 +180,7 @@ class BookingScreen extends StatelessWidget {
                         ),
                         Divider(),
                         Padding(
-                          padding: const EdgeInsets.only(left: 50, right: 40),
+                          padding: const EdgeInsets.only(left: 40, right: 30),
                           child: Row(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -198,7 +199,7 @@ class BookingScreen extends StatelessWidget {
                                   children: <Widget>[
                                     Icon(Icons.monetization_on),
                                     Text(
-                                      'Cash',
+                                      'cash'.tr,
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -222,7 +223,7 @@ class BookingScreen extends StatelessWidget {
                                       width: 25,
                                     ),
                                     Text(
-                                      'Promo',
+                                      'promo'.tr,
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -235,7 +236,7 @@ class BookingScreen extends StatelessWidget {
                                   showDialog(
                                     context: context,
                                     builder: (context) {
-                                      return AlertDialogCash();
+                                      return AlertDialogOption();
                                     },
                                   );
                                 },
@@ -245,7 +246,7 @@ class BookingScreen extends StatelessWidget {
                                       Icons.more_horiz,
                                     ),
                                     Text(
-                                      'Option',
+                                      'option'.tr,
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                       ),
@@ -270,11 +271,11 @@ class BookingScreen extends StatelessWidget {
                                 ),
                                 child: Padding(
                                   padding: const EdgeInsets.only(
-                                    left: 80,
-                                    right: 80,
+                                    left: 70,
+                                    right: 70,
                                   ),
                                   child: Text(
-                                    'Book',
+                                    'book'.tr,
                                     style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,

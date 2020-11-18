@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/screen/recently_visited_places_screen.dart';
 
 class SavedPlacesScreen extends StatelessWidget {
@@ -6,7 +7,7 @@ class SavedPlacesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Saved Places'),
+        title: Text('saved_places'.tr),
         centerTitle: true,
       ),
       body: Container(
@@ -16,13 +17,13 @@ class SavedPlacesScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                'Favorite Places',
+                'favorite_places'.tr,
                 style: TextStyle(
                   fontSize: 16,
                 ),
               ),
               SizedBox(
-                height: 5,
+                height: 10,
               ),
               Row(
                 children: <Widget>[
@@ -35,7 +36,7 @@ class SavedPlacesScreen extends StatelessWidget {
                     width: 10,
                   ),
                   Text(
-                    'Add Home',
+                    'add_home'.tr,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
@@ -54,7 +55,7 @@ class SavedPlacesScreen extends StatelessWidget {
                     width: 10,
                   ),
                   Text(
-                    'Add Work',
+                    'add_work'.tr,
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
@@ -69,7 +70,7 @@ class SavedPlacesScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Text(
-                    'More Places',
+                    'more_places'.tr,
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
@@ -77,7 +78,7 @@ class SavedPlacesScreen extends StatelessWidget {
                   ),
                   TextButton(
                     child: Text(
-                      'Add New',
+                      'add_new'.tr,
                       style: TextStyle(
                         fontSize: 14,
                         color: Colors.grey,

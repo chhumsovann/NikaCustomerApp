@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/driver_login_screen/driver_start_screen.dart';
 
 import 'driver_signup_screen.dart';
@@ -59,7 +60,7 @@ class LoginScreen extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(80, 15, 80, 15),
                             child: Text(
-                              'Login',
+                              'login'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 16,
@@ -86,7 +87,7 @@ class LoginScreen extends StatelessWidget {
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(70, 15, 70, 15),
                             child: Text(
-                              'Register',
+                              'register'.tr,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,

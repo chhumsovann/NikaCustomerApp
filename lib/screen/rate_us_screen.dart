@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:osom_rating/osom_rating.dart';
 
 class RateUsScreen extends StatefulWidget {
@@ -98,7 +99,7 @@ class _RateUsScreenState extends State<RateUsScreen> {
                                   height: 20,
                                 ),
                                 Text(
-                                  'Rate Us',
+                                  'rate_us'.tr,
                                   style: TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold,
@@ -136,7 +137,7 @@ class _RateUsScreenState extends State<RateUsScreen> {
                                   minLines: 5,
                                   maxLines: 10,
                                   decoration: InputDecoration(
-                                    hintText: 'Your feedback',
+                                    hintText: 'your_feedback'.tr,
                                     fillColor: Colors.white,
                                     enabledBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.all(
@@ -168,7 +169,7 @@ class _RateUsScreenState extends State<RateUsScreen> {
                                         padding: const EdgeInsets.only(
                                             left: 30, right: 30),
                                         child: Text(
-                                          'Submit',
+                                          'submit'.tr,
                                           style: TextStyle(
                                             color: Colors.white,
                                           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ReceiptScreen extends StatelessWidget {
   @override
@@ -46,7 +47,7 @@ class ReceiptScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 0),
                   child: Container(
-                    height: 304,
+                    height: 318,
                     width: double.infinity,
                     decoration: BoxDecoration(
                         color: Colors.black,
@@ -133,7 +134,7 @@ class ReceiptScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                'Payment Type',
+                                'payment_type'.tr,
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),
@@ -153,7 +154,7 @@ class ReceiptScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                'Minimum Fare',
+                                'minimum_fare'.tr,
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),
@@ -173,7 +174,7 @@ class ReceiptScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
                               Text(
-                                'Payable Amount',
+                                'payable_amount'.tr,
                                 style: TextStyle(
                                   color: Colors.white,
                                 ),
@@ -192,7 +193,7 @@ class ReceiptScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
                 Container(
                   width: 200,
@@ -203,7 +204,7 @@ class ReceiptScreen extends StatelessWidget {
                       borderRadius: new BorderRadius.circular(30.0),
                     ),
                     child: Text(
-                      'Confirm Total',
+                      'confirm_total'.tr,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,

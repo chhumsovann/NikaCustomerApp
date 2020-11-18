@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:nikabooking/driver_login_screen/login_screen.dart';
+import 'package:nikabooking/utils/message.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,8 +12,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final GetStorage _box = GetStorage();
+    return GetMaterialApp(
       title: 'Flutter Demo',
+      translations: Messages(),
+      locale: Locale(_box.read('defaultLocale') != null
+          ? _box.read('defaultLocale')
+          : 'en'),
+      fallbackLocale: Locale('en'),
       theme: ThemeData(
         // This is the theme of your application.
         // Try running your application with "flutter run". You'll see the

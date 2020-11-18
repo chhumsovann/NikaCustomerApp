@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PackageHistoryWidget extends StatelessWidget {
   const PackageHistoryWidget({
@@ -19,7 +20,7 @@ class PackageHistoryWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'Weekly',
+                  'weekly'.tr,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -82,7 +83,7 @@ class PackageHistoryWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'Weekly',
+                  'weekly'.tr,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
@@ -145,7 +146,7 @@ class PackageHistoryWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Text(
-                  'Daily',
+                  'daily'.tr,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,

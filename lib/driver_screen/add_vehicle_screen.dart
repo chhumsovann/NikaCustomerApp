@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:get/get.dart';
 
 class AddVehicleScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Vehicle'),
+        title: Text('add_vehicle'.tr),
         centerTitle: true,
       ),
       body: Container(
@@ -52,7 +53,7 @@ class AddVehicleScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  'Vehicle Detail',
+                                  'vehicle_detail'.tr,
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 18,
@@ -61,16 +62,13 @@ class AddVehicleScreen extends StatelessWidget {
                                 SizedBox(
                                   height: 10,
                                 ),
-                                Text(
-                                  'Please upload required documents.',
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                  ),
-                                ),
-                                Text(
-                                  'Get verified to start Start Driving',
-                                  style: TextStyle(
-                                    fontSize: 12,
+                                Container(
+                                  width: 220,
+                                  child: Text(
+                                    'dec_vehicle_detail'.tr,
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -106,17 +104,17 @@ class AddVehicleScreen extends StatelessWidget {
                                     color: Colors.grey,
                                   ),
                                   SizedBox(
-                                    width: 13,
+                                    width: 12,
                                   ),
                                   Text(
-                                    'Select Vehicle types',
+                                    'select_vehicle_types'.tr,
                                     style: TextStyle(
                                       color: Colors.black54,
                                       fontSize: 16,
                                     ),
                                   ),
                                   SizedBox(
-                                    width: 100,
+                                    width: 95,
                                   ),
                                   Icon(
                                     Icons.keyboard_arrow_down,
@@ -133,7 +131,7 @@ class AddVehicleScreen extends StatelessWidget {
                         FormBuilderTextField(
                           attribute: "Vehicle Number",
                           decoration: InputDecoration(
-                            labelText: "Vehicle Number",
+                            labelText: "vehicle_number".tr,
                             prefixIcon: Icon(Icons.local_taxi),
                             border: OutlineInputBorder(
                               borderSide: BorderSide(
@@ -153,7 +151,7 @@ class AddVehicleScreen extends StatelessWidget {
                         FormBuilderTextField(
                           attribute: "Brand & Model",
                           decoration: InputDecoration(
-                            labelText: "Brand & Model",
+                            labelText: "brand_model".tr,
                             prefixIcon: Icon(Icons.local_taxi),
                             border: OutlineInputBorder(
                               borderSide: BorderSide(

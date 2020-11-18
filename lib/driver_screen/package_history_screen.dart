@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/widget/driver_drawer_widget.dart';
 import 'package:nikabooking/widget/driver_package_history_widget.dart';
 
@@ -8,7 +9,7 @@ class PackageHistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Package History'),
+        title: Text('package_history'.tr),
         centerTitle: true,
       ),
       drawer: Theme(

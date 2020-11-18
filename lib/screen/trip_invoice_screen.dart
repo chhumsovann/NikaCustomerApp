@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class TripInvoiceScreen extends StatelessWidget {
   @override
@@ -102,7 +103,7 @@ class TripInvoiceScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            'ID',
+                            'id'.tr,
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -124,7 +125,7 @@ class TripInvoiceScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            'Vehicle category',
+                            'vehicle_category'.tr,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -158,7 +159,7 @@ class TripInvoiceScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            'Total Distance',
+                            'total_distance'.tr,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -178,7 +179,7 @@ class TripInvoiceScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            'Total fare',
+                            'total_fare'.tr,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -198,7 +199,7 @@ class TripInvoiceScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            'Payment Type',
+                            'payment_type'.tr,
                             style: TextStyle(
                               color: Colors.white,
                             ),
@@ -218,7 +219,7 @@ class TripInvoiceScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Text(
-                            'Payable Amount',
+                            'payable_amount'.tr,
                             style: TextStyle(
                               color: Colors.white,
                             ),

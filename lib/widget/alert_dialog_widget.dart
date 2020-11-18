@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/driver_screen/cash_out_screen.dart';
 
 class AlertDialogPromo extends StatelessWidget {
@@ -33,7 +34,7 @@ class AlertDialogPromo extends StatelessWidget {
               height: 10,
             ),
             Text(
-              'Add Promo Code',
+              'add_promo_code'.tr,
               style: TextStyle(
                 color: Colors.white,
               ),
@@ -54,7 +55,7 @@ class AlertDialogPromo extends StatelessWidget {
               FormBuilderTextField(
                 attribute: "Code",
                 decoration: InputDecoration(
-                  labelText: "Enter Code Promo",
+                  labelText: "enter_code_promo".tr,
                   border: OutlineInputBorder(),
                 ),
               ),
@@ -109,8 +110,8 @@ class AlertDialogPromo extends StatelessWidget {
   }
 }
 
-class AlertDialogCash extends StatelessWidget {
-  const AlertDialogCash({
+class AlertDialogOption extends StatelessWidget {
+  const AlertDialogOption({
     Key key,
   }) : super(key: key);
 
@@ -135,7 +136,7 @@ class AlertDialogCash extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'Option',
+                'option'.tr,
                 style: TextStyle(
                   color: Colors.white,
                 ),

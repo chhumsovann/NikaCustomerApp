@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/driver_screen/package_history_screen.dart';
 import 'package:nikabooking/widget/driver_drawer_widget.dart';
 
@@ -8,7 +9,7 @@ class CashOutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cash Out'),
+        title: Text('cash_out'.tr),
         centerTitle: true,
       ),
       drawer: Theme(
@@ -51,7 +52,7 @@ class CashOutScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Text(
-                            'Remaining Cash out Amount',
+                            'remaining_cash_out_amount'.tr,
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16,
@@ -87,7 +88,7 @@ class CashOutScreen extends StatelessWidget {
                                 height: 30,
                               ),
                               Text(
-                                'Transfer request',
+                                'transfer_request'.tr,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 16,
@@ -97,7 +98,7 @@ class CashOutScreen extends StatelessWidget {
                                 height: 15,
                               ),
                               Text(
-                                'This amount will be transferred to your bank account within 10 working days.',
+                                'transfer_process'.tr,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -108,7 +109,7 @@ class CashOutScreen extends StatelessWidget {
                               FormBuilderTextField(
                                 attribute: "Amount",
                                 decoration: InputDecoration(
-                                  labelText: "Enter Amount",
+                                  labelText: "enter_amount".tr,
                                   border: OutlineInputBorder(
                                     borderSide: BorderSide(
                                       color: Colors.white,
@@ -125,7 +126,7 @@ class CashOutScreen extends StatelessWidget {
                                 height: 20,
                               ),
                               Text(
-                                'Note: please note that there will be a \$1 charge',
+                                'note'.tr,
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -145,7 +146,7 @@ class CashOutScreen extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(30.0),
                                     ),
                                     child: Text(
-                                      'Submit',
+                                      'submit'.tr,
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 18,
@@ -172,7 +173,7 @@ class CashOutScreen extends StatelessWidget {
                                     );
                                   },
                                   child: Text(
-                                    'Cash Out History',
+                                    'cash_out_history'.tr,
                                     style: TextStyle(
                                       color: Colors.black,
                                       decoration: TextDecoration.underline,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/widget/map_draw_widget.dart';
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 
@@ -8,7 +9,7 @@ class TripDetailsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Container(),
-        title: Text('Trip Details'),
+        title: Text('trip_details'.tr),
         centerTitle: true,
       ),
       body: Container(
@@ -163,7 +164,7 @@ class TripDetailsScreen extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: <Widget>[
-                                          Text('Vehicle Number'),
+                                          Text('vehicle_number'.tr),
                                           Text(
                                             'GJ27FA3242',
                                             style: TextStyle(
@@ -189,7 +190,7 @@ class TripDetailsScreen extends StatelessWidget {
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
                                         children: <Widget>[
-                                          Text('ID'),
+                                          Text('id'.tr),
                                           Text(
                                             'TRI11224565425',
                                             style: TextStyle(
@@ -270,7 +271,7 @@ class TripDetailsScreen extends StatelessWidget {
                                     Column(
                                       children: <Widget>[
                                         Text(
-                                          'Distance',
+                                          'distance'.tr,
                                           style: TextStyle(
                                             color: Colors.grey,
                                           ),
@@ -286,7 +287,7 @@ class TripDetailsScreen extends StatelessWidget {
                                     Column(
                                       children: <Widget>[
                                         Text(
-                                          'Time',
+                                          'time'.tr,
                                           style: TextStyle(
                                             color: Colors.grey,
                                           ),
@@ -302,7 +303,7 @@ class TripDetailsScreen extends StatelessWidget {
                                     Column(
                                       children: <Widget>[
                                         Text(
-                                          'Price',
+                                          'price'.tr,
                                           style: TextStyle(
                                             color: Colors.grey,
                                           ),

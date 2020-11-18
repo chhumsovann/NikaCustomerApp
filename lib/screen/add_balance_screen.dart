@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/screen/saved_places_screen.dart';
 
 class AddBalanceScreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class _AddBalanceScreenState extends State<AddBalanceScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Balance'),
+        title: Text('add_balance'.tr),
         centerTitle: true,
       ),
       body: Container(
@@ -28,7 +29,7 @@ class _AddBalanceScreenState extends State<AddBalanceScreen> {
                 height: 10,
               ),
               Text(
-                'Select a top-up value',
+                'select_a_top-up_value'.tr,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 16,
@@ -87,7 +88,7 @@ class _AddBalanceScreenState extends State<AddBalanceScreen> {
                     padding: const EdgeInsets.only(
                         left: 50, right: 50, top: 10, bottom: 10),
                     child: Text(
-                      'Pay',
+                      'pay'.tr,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 18,

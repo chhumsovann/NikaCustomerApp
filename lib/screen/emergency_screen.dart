@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/widget/drawer_widget.dart';
 
 class EmergencyScreen extends StatefulWidget {
@@ -11,7 +12,7 @@ class _EmergencyScreenState extends State<EmergencyScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Emergency Contacts'),
+        title: Text('emergency_contacts'.tr),
         centerTitle: true,
       ),
       drawer: Theme(

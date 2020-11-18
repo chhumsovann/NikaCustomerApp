@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/driver_screen/start_trip_screen.dart';
 import 'package:nikabooking/widget/map_draw_widget.dart';
 
@@ -9,7 +10,7 @@ class GoToPickupScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Container(),
-        title: Text('Go to Pickup'),
+        title: Text('goto_pickup'.tr),
         centerTitle: true,
         actions: [
           Padding(
@@ -72,7 +73,7 @@ class GoToPickupScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Text(
-                                    'Pick Up',
+                                    'goto_pickup'.tr,
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,

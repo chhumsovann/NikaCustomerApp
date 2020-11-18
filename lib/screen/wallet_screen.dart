@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/screen/add_balance_screen.dart';
 import 'package:nikabooking/widget/drawer_widget.dart';
 
@@ -7,7 +8,7 @@ class WalletScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('E-Wallet'),
+        title: Text('e-Wallet'.tr),
         centerTitle: true,
       ),
       drawer: Theme(
@@ -55,7 +56,7 @@ class WalletScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              'Your Balance',
+                              'you_balance'.tr,
                               style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 14,
@@ -98,7 +99,7 @@ class WalletScreen extends StatelessWidget {
                               height: 5,
                             ),
                             Text(
-                              'Add',
+                              'add'.tr,
                               style: TextStyle(
                                 color: Colors.white,
                               ),
@@ -172,6 +173,9 @@ class WalletScreen extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
+                            SizedBox(
+                              height: 5,
+                            ),
                             Text(
                               'Added by you',
                               style: TextStyle(
@@ -193,6 +197,9 @@ class WalletScreen extends StatelessWidget {
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold,
                               ),
+                            ),
+                            SizedBox(
+                              height: 5,
                             ),
                             Text(
                               '11:02 AM',

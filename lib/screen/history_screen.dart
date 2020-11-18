@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/widget/date_picker_widget.dart';
 import 'package:nikabooking/widget/drawer_widget.dart';
 import 'package:nikabooking/widget/item_history_widget.dart';
@@ -9,7 +10,7 @@ class HistoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('History'),
+        title: Text('history'.tr),
         centerTitle: true,
       ),
       drawer: Theme(

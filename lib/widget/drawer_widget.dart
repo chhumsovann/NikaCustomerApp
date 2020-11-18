@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/driver_login_screen/login_screen.dart';
 import 'package:nikabooking/screen/emergency_screen.dart';
 import 'package:nikabooking/screen/history_screen.dart';
 import 'package:nikabooking/screen/home_screen.dart';
+import 'package:nikabooking/screen/language_screen.dart';
 import 'package:nikabooking/screen/rate_us_screen.dart';
 import 'package:nikabooking/screen/trip_details_screen.dart';
 import 'package:nikabooking/screen/trip_invoice_screen.dart';
@@ -42,6 +44,9 @@ class DrawerWidget extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
           InkWell(
             onTap: () {
               Navigator.push(
@@ -64,20 +69,25 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Home',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'home'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 150,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -111,20 +121,25 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'E-Wallet',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'e-Wallet'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 138,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -158,20 +173,25 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'History',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'history'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 143,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -205,20 +225,25 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Schedule',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'schedule'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 130,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -252,20 +277,25 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Notification',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'notification'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 115,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -299,20 +329,25 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Help Center',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'help_center'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 115,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -339,20 +374,25 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Setting',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'setting'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 143,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -386,20 +426,77 @@ class DrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Emergency Contacts',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'emergency_contacts'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
                   ),
+                ],
+              ),
+            ),
+          ), //Emergency
+          Container(
+            padding: EdgeInsets.fromLTRB(65, 0, 36, 0),
+            child: Divider(
+              color: Colors.white,
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LanguageScreen(),
+                ),
+              );
+            },
+            child: Container(
+              child: Row(
+                children: <Widget>[
                   SizedBox(
-                    width: 58,
+                    width: 30,
                   ),
                   Icon(
-                    Icons.arrow_forward_ios,
+                    Icons.language,
                     color: Colors.white,
-                    size: 16,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'language'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -412,7 +509,7 @@ class DrawerWidget extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 100,
+            height: 50,
           ),
           InkWell(
             onTap: () {

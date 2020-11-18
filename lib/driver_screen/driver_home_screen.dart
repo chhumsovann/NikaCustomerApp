@@ -1,6 +1,7 @@
 import 'package:circular_countdown/circular_countdown.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/driver_screen/goto_pickup_screen.dart';
 import 'package:nikabooking/widget/driver_drawer_widget.dart';
 import 'package:nikabooking/widget/map_draw_widget.dart';
@@ -121,7 +122,7 @@ class AlertDialogOffline extends StatelessWidget {
                         Row(
                           children: <Widget>[
                             Text(
-                              "Today's Earned: ",
+                              "today's_earned".tr,
                               style: TextStyle(
                                 fontSize: 18,
                               ),
@@ -277,7 +278,7 @@ class AlertDialogCustomer extends StatelessWidget {
                               height: 10,
                             ),
                             Text(
-                              'Total Fare : \$ 3',
+                              'total_fare'.tr + ' : \$ 3',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -371,7 +372,7 @@ class AlertDialogCustomer extends StatelessWidget {
                               borderRadius: new BorderRadius.circular(30.0),
                             ),
                             child: Text(
-                              'Accept',
+                              'accept'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,
@@ -404,7 +405,7 @@ class AlertDialogCustomer extends StatelessWidget {
                               ),
                             ),
                             child: Text(
-                              'Decline',
+                              'decline'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,

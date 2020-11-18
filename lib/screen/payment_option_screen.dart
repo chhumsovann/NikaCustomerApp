@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/screen/waiting_driver_screen.dart';
 
 class PaymentOptionScreen extends StatelessWidget {
@@ -6,7 +7,7 @@ class PaymentOptionScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Payment Option'),
+        title: Text('payment_option'.tr),
         centerTitle: true,
       ),
       body: Container(
@@ -31,7 +32,7 @@ class PaymentOptionScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      'Cash',
+                      'cash'.tr,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
@@ -75,7 +76,7 @@ class PaymentOptionScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          'E-Wallet Balance',
+                          'e-wallet_balance'.tr,
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.bold,
@@ -127,7 +128,7 @@ class PaymentOptionScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      'Credit Card',
+                      'credit_card'.tr,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,

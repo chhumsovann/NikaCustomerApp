@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/driver_screen/buy_package_screen.dart';
 import 'package:nikabooking/driver_screen/cash_out_screen.dart';
 import 'package:nikabooking/driver_screen/driver_history_screen.dart';
@@ -19,43 +20,6 @@ class DriverDrawerWidget extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: <Widget>[
-//          DrawerHeader(
-//            padding: const EdgeInsets.all(0),
-//            child: UserAccountsDrawerHeader(
-//              currentAccountPicture: CircleAvatar(
-//                backgroundImage: AssetImage('assets/images/driver.jpg'),
-//              ),
-//              decoration: BoxDecoration(
-//                color: Colors.white,
-//              ),
-//              accountName: Text(
-//                "Aron Buttle",
-//                style: TextStyle(
-//                  color: Colors.black,
-//                  fontSize: 20,
-//                ),
-//              ),
-//              accountEmail: Row(
-//                mainAxisAlignment: MainAxisAlignment.start,
-//                children: [
-//                  Icon(
-//                    Icons.star,
-//                    color: Colors.yellow,
-//                  ),
-//                  SizedBox(
-//                    width: 5,
-//                  ),
-//                  Text(
-//                    '0.00',
-//                    style: TextStyle(
-//                      color: Colors.black,
-//                    ),
-//                  ),
-//                ],
-//              ),
-//            ),
-//          ),
-
           Container(
             padding: EdgeInsets.only(top: 30, left: 10, right: 10, bottom: 10),
             color: Colors.white,
@@ -139,20 +103,25 @@ class DriverDrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Home',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'home'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 150,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -186,20 +155,25 @@ class DriverDrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'E-Wallet',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'e-Wallet'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 138,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -233,20 +207,25 @@ class DriverDrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'History',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'history'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 143,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -280,20 +259,25 @@ class DriverDrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Package History',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'package_history'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 84,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -306,14 +290,7 @@ class DriverDrawerWidget extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {
-//              Navigator.push(
-//                context,
-//                MaterialPageRoute(
-//                  builder: (context) => DateTimeWidget(),
-//                ),
-//              );
-            },
+            onTap: () {},
             child: Container(
               child: Row(
                 children: <Widget>[
@@ -327,20 +304,25 @@ class DriverDrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Notification',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text(
+                          'notification'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 115,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -367,20 +349,25 @@ class DriverDrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Subscription',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'subscription'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 108,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -414,20 +401,25 @@ class DriverDrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Setting',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'setting'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 143,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -461,20 +453,25 @@ class DriverDrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Cash out',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'cash_out'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 130,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),
@@ -508,20 +505,25 @@ class DriverDrawerWidget extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Text(
-                    'Logout',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
+                  Container(
+                    width: 200,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'logout'.tr,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 14,
+                          ),
+                        ),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                      ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 142,
-                  ),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    color: Colors.white,
-                    size: 16,
                   ),
                 ],
               ),

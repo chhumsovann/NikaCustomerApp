@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:get/get.dart';
 
 class DriverSignUpScreen extends StatefulWidget {
   @override
@@ -50,34 +51,31 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      'Personal Verification',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18,
+                                Container(
+                                  width: 230,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        'personal_verification'.tr,
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18,
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    Text(
-                                      'Please upload required documents.',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.grey,
+                                      SizedBox(
+                                        height: 10,
                                       ),
-                                    ),
-                                    Text(
-                                      'Get verified to start Riding',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        color: Colors.grey,
+                                      Text(
+                                        'dec_register'.tr, // Description
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                                 Icon(
                                   Icons.person_pin_rounded,
@@ -91,7 +89,7 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
                             FormBuilderTextField(
                               attribute: "FirstName",
                               decoration: InputDecoration(
-                                labelText: "First Name",
+                                labelText: "first_name".tr,
                                 prefixIcon: Icon(Icons.person),
                                 border: OutlineInputBorder(
                                   borderSide: BorderSide(
@@ -111,7 +109,7 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
                             FormBuilderTextField(
                               attribute: "LastName",
                               decoration: InputDecoration(
-                                labelText: "Last Name",
+                                labelText: "last_name".tr,
                                 prefixIcon: Icon(Icons.person),
                                 border: OutlineInputBorder(),
                               ),
@@ -130,9 +128,9 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
                               // defaultSelectedCountryIsoCode: 'KE',
                               cursorColor: Colors.black,
                               // style: TextStyle(color: Colors.black, fontSize: 18),
-                              decoration: const InputDecoration(
+                              decoration: InputDecoration(
                                 border: OutlineInputBorder(),
-                                labelText: 'Phone Number',
+                                labelText: 'phone_number'.tr,
                               ),
                               onChanged: _onChanged,
                               priorityListByIsoCode: ['US'],
@@ -147,8 +145,8 @@ class _DriverSignUpScreenState extends State<DriverSignUpScreen> {
                             FormBuilderTextField(
                               attribute: "Email",
                               decoration: InputDecoration(
-                                labelText: "Your Emial",
-                                prefixIcon: Icon(Icons.email_outlined),
+                                labelText: "your_email".tr,
+                                prefixIcon: Icon(Icons.email),
                                 border: OutlineInputBorder(),
                               ),
                               validators: [
