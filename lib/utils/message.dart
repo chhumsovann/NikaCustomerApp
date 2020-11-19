@@ -74,6 +74,7 @@ class Messages extends Translations {
           'total_earned': 'Total Earned',
           'weekly': 'Weekly',
           'daily': 'Daily',
+          'monthly': 'Monthly',
           'start_trip': 'Start Trip',
           'remaining_cash_out_amount': 'Remaining Cash Out Amount',
           'transfer_request': 'Transfer Request',
@@ -88,6 +89,13 @@ class Messages extends Translations {
               'Please upload required documents.Get verified to start Start Driving',
           'select_vehicle_types': 'Select Vehicle Types',
           'brand_model': 'Brand & Model',
+          'trip_invoice': 'Trip Invoice',
+          'receipt': 'Receipt',
+          'buy_package': 'Buy Package',
+          'buy': 'Buy',
+          'service_days': 'You will get new request till 24 hours',
+          'service_weeks': 'You will get new ride request till 6 days',
+          'service_months': 'You will get new ride request till 30 days',
         },
         ''
             'kh': {
@@ -163,6 +171,7 @@ class Messages extends Translations {
           'total_earned': 'ប្រាក់រកបានសរុប',
           'weekly': 'ប្រចាំសប្តាហ៍',
           'daily': 'ប្រចាំថ្ងៃ',
+          'monthly': 'ប្រចាំខែ',
           'start_trip': 'ការធ្វើដំណើរចាប់ផ្តើម',
           'remaining_cash_out_amount': 'ចំនួនសាច់ប្រាក់នៅសល់',
           'transfer_request': 'ការផ្ទេរទឹកប្រាក់',
@@ -177,6 +186,13 @@ class Messages extends Translations {
               'សូមបំពេញព័តមានអំពីរថយន្ដ ដើម្បីចាប់ផ្ដើមប្រើប្រាស់',
           'select_vehicle_types': 'ជ្រើសរើសប្រភេទរថយន្ដ',
           'brand_model': 'ម៉ូដែលរថយន្ដ',
+          'trip_invoice': 'វិក័យប័ត្រ',
+          'receipt': 'វិក័យប័ត្រ',
+          'buy_package': 'ទិញកញ្ចប់ធ្វើដំណើរ',
+          'buy': 'ទិញ',
+          'service_days': 'អ្នកនឹងទទួលបានការធ្វើដំណើររហូតដល់ ២៤ ម៉ោង',
+          'service_weeks': 'អ្នកនឹងទទួលបានការធ្វើដំណើររហូតដល់ ៦ ថ្ងៃ',
+          'service_months': 'អ្នកនឹងទទួលបានការធ្វើដំណើររហូតដល់ ៣០ ថ្ងៃ',
         },
       };
 }

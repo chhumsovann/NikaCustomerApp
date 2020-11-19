@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:get/get.dart';
-import 'package:nikabooking/driver_screen/package_history_screen.dart';
 import 'package:nikabooking/widget/driver_drawer_widget.dart';
 
 class CashOutScreen extends StatelessWidget {
@@ -163,15 +162,7 @@ class CashOutScreen extends StatelessWidget {
                               Container(
                                 alignment: Alignment.center,
                                 child: TextButton(
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            PackageHistoryScreen(),
-                                      ),
-                                    );
-                                  },
+                                  onPressed: () {},
                                   child: Text(
                                     'cash_out_history'.tr,
                                     style: TextStyle(

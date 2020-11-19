@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:nikabooking/widget/alert_dialog_widget.dart';
 import 'package:nikabooking/widget/driver_drawer_widget.dart';
 
@@ -12,7 +13,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Buy Package '),
+        title: Text('buy_package'.tr),
         centerTitle: true,
       ),
       drawer: Theme(
@@ -50,7 +51,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              'Daily',
+                              'daily'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
@@ -65,7 +66,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
                               ),
                             ),
                             Text(
-                              'You will get new request till 24 hours',
+                              'service_days'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14,
@@ -79,7 +80,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
                             borderRadius: new BorderRadius.circular(18.0),
                           ),
                           child: Text(
-                            'Buy',
+                            'buy'.tr,
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white,
@@ -119,7 +120,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              'Weekly',
+                              'weekly'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
@@ -134,7 +135,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
                               ),
                             ),
                             Text(
-                              'You will get new ride request till 6 days ',
+                              'service_weeks'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14,
@@ -148,7 +149,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
                             borderRadius: new BorderRadius.circular(18.0),
                           ),
                           child: Text(
-                            'Buy',
+                            'buy'.tr,
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white,
@@ -188,7 +189,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
                             Text(
-                              'Monthly',
+                              'monthly'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
@@ -203,7 +204,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
                               ),
                             ),
                             Text(
-                              'You will get new ride request till 30 days',
+                              'service_months'.tr,
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 14,
@@ -217,7 +218,7 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
                             borderRadius: new BorderRadius.circular(18.0),
                           ),
                           child: Text(
-                            'Buy',
+                            'buy'.tr,
                             style: TextStyle(
                               fontSize: 16,
                               color: Colors.white,

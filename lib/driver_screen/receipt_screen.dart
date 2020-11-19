@@ -8,7 +8,7 @@ class ReceiptScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Container(),
-        title: Text('Receipt'),
+        title: Text('receipt'.tr),
         centerTitle: true,
       ),
       body: Container(

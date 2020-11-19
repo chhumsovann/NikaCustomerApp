@@ -8,7 +8,7 @@ class TripInvoiceScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: Container(),
-        title: Text('Trip Invoice'),
+        title: Text('trip_invoice'.tr),
         centerTitle: true,
       ),
       body: Container(

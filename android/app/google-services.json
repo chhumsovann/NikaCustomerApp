@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "329521668306",
+    "firebase_url": "https://taxi-app-e1f1f.firebaseio.com",
+    "project_id": "taxi-app-e1f1f",
+    "storage_bucket": "taxi-app-e1f1f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329521668306:android:3d9fd86d7fc97c019c4d0b",
+        "android_client_info": {
+          "package_name": "nikabooking.cambodia.nikabooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329521668306-qeaa3fptghkac5u6tv5tl9us6l5bbu0s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG10CvhCCQslEzE8Kqr5LfUzGq_v5-q-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329521668306-qeaa3fptghkac5u6tv5tl9us6l5bbu0s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

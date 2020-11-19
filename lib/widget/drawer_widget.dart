@@ -6,7 +6,7 @@ import 'package:nikabooking/screen/emergency_screen.dart';
 import 'package:nikabooking/screen/history_screen.dart';
 import 'package:nikabooking/screen/home_screen.dart';
 import 'package:nikabooking/screen/language_screen.dart';
-import 'package:nikabooking/screen/rate_us_screen.dart';
+import 'package:nikabooking/screen/notification_screen.dart';
 import 'package:nikabooking/screen/trip_details_screen.dart';
 import 'package:nikabooking/screen/trip_invoice_screen.dart';
 import 'package:nikabooking/screen/wallet_screen.dart';
@@ -260,7 +260,7 @@ class DrawerWidget extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => RateUsScreen(),
+                  builder: (context) => NotificationScreen(),
                 ),
               );
             },

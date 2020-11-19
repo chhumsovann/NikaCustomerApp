@@ -7,6 +7,7 @@ import 'package:nikabooking/driver_screen/driver_history_screen.dart';
 import 'package:nikabooking/driver_screen/driver_home_screen.dart';
 import 'package:nikabooking/driver_screen/driver_setting_screen.dart';
 import 'package:nikabooking/driver_screen/package_history_screen.dart';
+import 'package:nikabooking/screen/notification_screen.dart';
 import 'package:nikabooking/screen/select_language_screen.dart';
 import 'package:nikabooking/widget/date_time_widget.dart';
 
@@ -290,7 +291,14 @@ class DriverDrawerWidget extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => NotificationScreen(),
+                ),
+              );
+            },
             child: Container(
               child: Row(
                 children: <Widget>[
